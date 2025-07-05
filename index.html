@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Management</title>
+  <link rel="stylesheet" href="frontend/style.css">  <!-- Link to the styles file -->
+</head>
+<body>
+  <div class="container">
+    <h1>Product Management</h1>
+  
+    <!-- Form to enter a new product -->
+    <form id="form">
+      <input type="text" id="name" placeholder="product name" required />
+      <input type="number" id="price" placeholder="price" required />
+      <button id="submit">Add product</button>
+      <button id="show-products" type="button">Show products</button>
+    </form>
+  
+  
+    <!-- Modal that displays the list of products -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <h2>Registered Products</h2>
+        <!-- Product table -->
+        <table>
+          <thead>
+            <tr>
+              <th>Select</th>
+              <th>name</th>
+              <th>price</th>
+            </tr>
+          </thead>
+          <tbody id="product-table"></tbody>
+        </table>
+        <button id="delete-selected">Delete Selected products</button>
+      </div>
+    </div>
+  </div>
+  <!-- Link to the JavaScript file -->
+  <script src="frontend/main.js"></script>
+</body>
+</html>
